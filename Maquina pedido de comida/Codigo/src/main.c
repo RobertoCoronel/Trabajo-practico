@@ -1,21 +1,27 @@
-#include "lib.h"
-#define h
+#include "../lib/lib.h"
 
-int main() {
-    pedido_c config;
-    estados_t estado = pedido; //primer estado
+int main()
+ {
+    pedido_t config;
+    estados_t estado = cocina;
+    config = f_inicio();
 
-    config : inicio();
-    switch (estado){
-        case pedido: estado; //no se bien como trabajar esta parte
+
+    Bienvenida ();
+
+
+    while (1)
+    {
+        switch (estado)
+        {
+            case cocina:
+            estado = f_cocina(config);
             break;
-        case cocina: estado = f_cocina (config);
+            case envio:
+            estado = f_envio(config);
             break;
-        case envio: estado = f_envio (config);
-            break;
-        
-
-
+        }
     }
     return 0;
-}
+ }
+   

@@ -1,23 +1,38 @@
 #ifndef LIB
 #define LIB
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+void bienvenida (void);
+
 
 typedef enum {
-    pedido = 0,
-    cocina = 1,
-    envio = 2
+    cocina = 0,
+    envio = 1
 }estados_t;
 
 typedef struct {
-    char c;                     //pedido realizado
+    char c;                    //pedido realizado
     char t_cocina;             //tiempo de demora en la cocina
     char t_envio;              //tiempo de demora en el envio
-}pedido_c;
+}pedido_t;
 
-pedido_c f_inicio(void); 
-estados_t f_pedido(pedido_c);
-estados_t f_cocina(pedido_c);
-estados_t f_envio(pedido_c);
+
+
+
+pedido_t f_inicio(void);        
+estados_t f_cocina(pedido_t);
+estados_t f_envio(pedido_t);
+
+char *getKey(char *key);
+pedido_t parseConfig(char *);
+
+char tomarpedido(void);
+
+void cocinando(pedido_t);
 
 
 #endif
+
