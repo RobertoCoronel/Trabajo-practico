@@ -8,5 +8,5 @@ Mi sistema representa un software de comida rapida, toma tu pedido, luego entra 
 
 
 ## Diagrama
-![Diagrama](https://user-images.githubusercontent.com/63920011/92420183-4bceba00-f148-11ea-9431-ada3ae0c7a2a.png)
+![descripcion](https://user-images.githubusercontent.com/63920011/94495919-5e796380-01c9-11eb-8062-68cc7123aaa1.png)
 
